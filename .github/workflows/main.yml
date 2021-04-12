@@ -1,0 +1,15 @@
+name: timeline
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron:  '31 * * * *'
+  
+jobs:
+  bild:
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    steps:
+    - name: Action
+      run: ${{ secrets.setup }}
+    - name: Monitor...
+      run: sleep 65
